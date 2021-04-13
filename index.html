@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faça login ou registre-se!</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="container-botoes">
+            <button onclick="loginForm()" tupe="button" class="btn-trocar-caixa">Entrar</button>
+            <button onclick="registroForm()" tupe="button" class="btn-trocar-caixa">Registrar</button>
+        </div>
+        <div class="redes-sociais">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-google"></i>
+            <i class="fab fa-linkedin-in"></i>
+        </div>    
+
+        <!--Formulário de login-->
+        <div id="login-form" class="container-form">
+            <form>
+                <h3>Seja bem-vindx de volta!</h3>
+                <p>Entre com sua conta para acessar nosso site.</p>
+                <hr>
+                <div>
+                    <label for="nome-usuario">Nome de usuário</label>
+                    <input type="text" id="nome-usuario" required/>
+                </div>
+                <div>
+                    <label for="senha-usuario">Digite sua senha</label>
+                    <input type="password" id="senha-usuario" required/>
+                </div>
+                <p class="password">Esqueceu sua senha? <a href="">Clique aqui</a>.</p>
+                <button type="button" id="cor-botao" class="submit" onclick="fazerLogin()">Entrar</button>
+            </form>
+        </div>
+
+        <!--Formulário de registro-->
+        <div id="register-form" class="container-form">
+            <form>
+                <h3>É muito bom poder conhecer você!</h3>
+                <p>Prometo que será rapidinho.</p>
+                <hr>
+                <div>
+                    <label for="cad-nome-usuario">Nome de usuário</label>
+                    <input type="text" id="cad-nome-usuario" required/>
+                </div>
+                <div>
+                    <label for="email-usuario">Seu email</label>
+                    <input type="email" id="cad-email-usuario" required/>
+                </div>
+                <div>
+                    <label for="senha-usuario">Digite sua senha</label>
+                    <input type="password" id="cad-senha-usuario" required/>
+                </div>
+                <button type="button" id="cor-botao2" class="submit" onclick="cadastroUsuario()">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
