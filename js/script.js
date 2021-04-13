@@ -42,15 +42,23 @@ function fazerLogin(){
         senha: document.getElementById("senha-usuario").value
     };
 
-    if(usuario.nome === novoUsuario.nome && usuario.senha === novoUsuario.senha){
-        document.getElementById("cor-botao").style.background = "#2B9720";
-        setTimeout(() => {
-            alert("É muito bom te ter aqui! Obrigado por testar.")            
-        }, 1000);
+    if(usuario.nome === "" || usuario.senha === ""){
+        alert("Ué, você não vai digitar nada?")  
     }else{
-        document.getElementById("cor-botao").style.background = "#EB3336";
-        setTimeout(() => {
-            alert("Acho que você ainda não fez o cadastro. Clica botão ali em cima para se registrar.")            
-        }, 1000);
+        if(usuario.nome === novoUsuario.nome && usuario.senha === novoUsuario.senha){
+            document.getElementById("cor-botao").style.background = "#2B9720";
+            setTimeout(() => {
+                alert("É muito bom te ter aqui! Obrigado por testar.")            
+            }, 1000);
+        }else{
+            document.getElementById("cor-botao").style.background = "#EB3336";
+            setTimeout(() => {
+                alert("Acho que você ainda não fez o cadastro. Clica botão ali em cima para se registrar.")            
+            }, 1000);
+        }
     }
+}
+
+function esqueciSenha(){
+    alert("Opa, pera lá! Ainda não fiz isso. 😅")
 }
